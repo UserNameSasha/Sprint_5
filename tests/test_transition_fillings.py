@@ -12,5 +12,6 @@ class TestTransitionFillings:
         driver.find_element(*Locators.ENTER_ACCOUNT_TEXT_PASSWORD).send_keys(Data.password)
         driver.find_element(*Locators.DESINGER_BUTTON).click()
         driver.find_element(*Locators.FILLINGS_BUTTON).click()
-        assert driver.current_url == URL.main_site
+        driver.find_element(*Locators.FILLINGS).click()
+        assert driver.current_url == URL.main_site + "ingredient/61c0c5a71d1f82001bdaaa70"
         
