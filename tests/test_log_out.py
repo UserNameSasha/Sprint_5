@@ -12,8 +12,10 @@ class TestLogOut:
         driver.find_element(*Locators.ENTER_ACCOUNT_TEXT_EMAIL).send_keys(Data.email)
         driver.find_element(*Locators.ENTER_ACCOUNT_TEXT_PASSWORD).send_keys(Data.password)
         driver.find_element(*Locators.ENTER_BUTTON).click()
+        driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
+        driver.find_element(*Locators.EXIT_BUTTON).click()
+        assert driver.current_url == URL.main_site + "account/profile"
         
-        assert driver.current_url == URL.main_site + "login"
         
-        driver.quit()
-        #данная проверка не возможна по причине: после авторизации отсуствует кнопка "Выход"
+        
+        

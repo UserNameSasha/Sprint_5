@@ -1,4 +1,4 @@
 class Data:
-    name = 'Александр'
-    email = 'klimchuk_39_000@mail.ru'
-    password = '123456'
+    name = 'Иван'
+    email = 'Ivan_40_000@mail.ru'
+    password = '123456789'

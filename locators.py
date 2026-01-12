@@ -24,7 +24,7 @@ class Locators:
     #Локаторы для перехода в разделы
     DESINGER_BUTTON = (By.XPATH,"//*[@id='root']/div/header/nav/ul/li[1]/a/p")#кнопка "Конструктор"
     LOGO = (By.XPATH,"//*[@id='root']/div/header/nav/div/a")#логотип STELLAR BURGERS
-    #EXIT_BUTTON = (By.XPATH,"")#кнопка "Выход"
+    EXIT_BUTTON = (By.XPATH,"//*[@id='root']/div/main/div/nav/ul/li[3]/button")#кнопка "Выход"
 
     #локаторы для разделов
     ROLLS_BUTTON = (By.XPATH,"//*[@id='root']/div/main/section[1]/div[2]/h2[1]")#булки
