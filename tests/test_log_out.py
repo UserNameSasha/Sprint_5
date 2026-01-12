@@ -1,7 +1,8 @@
 from curl import URL
 from locators import Locators
 from data import Data
-
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class TestLogOut:
@@ -14,8 +15,5 @@ class TestLogOut:
         driver.find_element(*Locators.ENTER_BUTTON).click()
         driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
         driver.find_element(*Locators.EXIT_BUTTON).click()
-        assert driver.current_url == URL.main_site + "account/profile"
-        
-        
-        
-        
+        WebDriverWait(driver, 5).until(EC.url_contains(URL.main_site + "login"))
+        assert driver.current_url == URL.main_site + "login"
