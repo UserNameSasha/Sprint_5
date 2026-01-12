@@ -23,4 +23,4 @@ class TestStellarBurgersOpenAndRegistration:
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         reg_text = WebDriverWait(driver, 10, poll_frequency=0.1).until(EC.visibility_of_element_located(Locators.REG_TEXT)).text
         assert reg_text == 'Такой пользователь уже существует'
-        driver.quit()
+        

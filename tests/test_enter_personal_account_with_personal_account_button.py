@@ -12,4 +12,4 @@ class TestEnterPersonalAccountWithPersonalAccountButton:
         driver.find_element(*Locators.ENTER_ACCOUNT_TEXT_PASSWORD).send_keys(Data.password)
         driver.find_element(*Locators.ENTER_BUTTON).click()
         assert driver.current_url == URL.main_site + "login"
-        driver.quit()
+        

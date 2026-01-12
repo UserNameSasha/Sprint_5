@@ -21,4 +21,4 @@ class TestRegistrationWithInvalidData:
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         pass_text = WebDriverWait(driver, 10, poll_frequency=0.1).until(EC.visibility_of_element_located(Locators.ERROR_PASS)).text
         assert pass_text == 'Некорректный пароль'
-        driver.quit()
+        

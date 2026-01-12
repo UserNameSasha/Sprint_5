@@ -9,4 +9,4 @@ class TestClickDesingerButton:
         driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
         driver.find_element(*Locators.DESINGER_BUTTON).click()
         assert driver.current_url == URL.main_site
-        driver.quit()
+        
