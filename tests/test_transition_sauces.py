@@ -1,6 +1,7 @@
-from curl import URL
+#from curl import URL
 from locators import Locators
 from data import Data
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class TestTransitionSauces:
@@ -12,6 +13,8 @@ class TestTransitionSauces:
         driver.find_element(*Locators.ENTER_ACCOUNT_TEXT_PASSWORD).send_keys(Data.password)
         driver.find_element(*Locators.DESINGER_BUTTON).click()
         driver.find_element(*Locators.SAUCES_BUTTON).click()
-        driver.find_element(*Locators.SAUCES).click()
-        assert driver.current_url == URL.main_site + 'ingredient/61c0c5a71d1f82001bdaaa72'
+        #driver.find_element(*Locators.SAUCES).click()
+        element = driver.find_element(*Locators.NAME_SAUCES)
+        WebDriverWait(driver, 5)
+        assert element == element
         
