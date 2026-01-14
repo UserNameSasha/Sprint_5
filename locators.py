@@ -28,14 +28,14 @@ class Locators:
 
     #локаторы для разделов
     ROLLS_BUTTON = (By.XPATH,"//span[text()='Булки']")#булки
-    BREAD = (By.XPATH,"(//p[text()='Флюоресцентная булка R2-D3'])[1]")#Флюоресцентная булка R2-D3(для проверки переходов по разделам)
-    NAME_ROLLS = (By.XPATH,"//h2[text()='Булки']")
+    
+    NAME_ROLLS = (By.XPATH,"//h2[text()='Булки']")#элемент конструктора
 
     SAUCES_BUTTON = (By.XPATH,"//span[text()='Соусы']")#соусы
-    SAUCES = (By.XPATH,"(//p[text()='Соус Spicy-X'])[1]")#Соус Spicy-X(для проверки переходов по разделам)
-    NAME_SAUCES = (By.XPATH,"//h2[text()='Соусы']")
+    
+    NAME_SAUCES = (By.XPATH,"//h2[text()='Соусы']")#элемент конструктора
 
     FILLINGS_BUTTON = (By.XPATH,"//span[text()='Начинки']")#начинки
-    FILLINGS = (By.XPATH,"(//p[text()='Говяжий метеорит (отбивная)'])[1]")#начинки Говяжий метеорит (отбивная)(для проверки переходов по разделам)
-    NAME_FILLINGS = NAME_SAUCES = (By.XPATH,"//h2[text()='Начинки']")
+    
+    NAME_FILLINGS = NAME_SAUCES = (By.XPATH,"//h2[text()='Начинки']")#элемент конструктора
 

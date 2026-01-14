@@ -1,7 +1,7 @@
-#from curl import URL
 from locators import Locators
 from data import Data
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 
@@ -15,8 +15,7 @@ class TestTransitionRolls:
         driver.find_element(*Locators.DESINGER_BUTTON).click()
         driver.find_element(*Locators.SAUCES_BUTTON).click()
         driver.find_element(*Locators.ROLLS_BUTTON).click()
-        #driver.find_element(*Locators.BREAD).click()
         element = driver.find_element(*Locators.NAME_ROLLS)
-        WebDriverWait(driver, 5)
-        assert element == element
+        WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.NAME_ROLLS))
+        assert element.is_displayed()
         
